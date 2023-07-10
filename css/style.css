@@ -1,0 +1,80 @@
+body {
+  height: 1000vh;
+}
+
+.title .bandongan-1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.navbar-brand .bandongan {
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: none;
+}
+
+.title .address {
+  font-size: 0.9rem;
+}
+
+.navbar-brand h6 {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .title .bandongan-1 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .title .address {
+    font-size: 0.7rem;
+  }
+
+  .navbar-brand img {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  /* .title {
+    display: none;
+  } */
+
+  /* .title .bandongan-1 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .title .address {
+    font-size: 0.7rem;
+  } */
+
+  .navbar-brand img {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  .navbar .container .offcanvas {
+    width: 70%;
+  }
+
+  /* .carousel-caption h5 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.8rem;
+  } */
+}
+
+@media (max-width: 460px) {
+  .title {
+    display: none;
+  }
+
+  .navbar-brand h6 {
+    display: initial;
+  }
+}
