@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!--
+  @license
+  Copyright 2019 Google LLC. All Rights Reserved.
+  SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Umpak Sumbing</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+
+  <style>
+    /* Set the height and width of the map container */
+    #map {
+      height: calc(100% - 100px);
+      /* Set the desired height of the map, subtracting navbar height */
+      width: 100%;
+      /* Set the desired width of the map */
+      margin: 0 auto;
+      /* Center the map horizontally */
+    }
+
+    /* Optional: Makes the sample page fill the window. */
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-item-center" href="#">
+        <img src="/img/logo/logo.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-top" />
+        <h6 class="my-auto mx-2">Umpak Sumbing</h6>
+        <div class="title mx-2 mx-md-3">
+          <div class="bandongan-1">Umpak Sumbing</div>
+          <div class="address">Kawasan Pedesaan Umpak Sumbing, Kecamatan Bandongan</div>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <ul class="navbar-nav justify-content-end mx-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./pages/pariwisata.html">Pariwisata</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Dropdown </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END NAVBAR -->
+
+  <div id="map"></div>
+  <div class="container text-center">
+    <h1 id="locationName">Bandongan</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <button class="btn btn-primary mr-2">Previous</button>
+        <button class="btn btn-primary">Next</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    /**
+     * @license
+     * Copyright 2019 Google LLC. All Rights Reserved.
+     * SPDX-License-Identifier: Apache-2.0
+     */
+    // This example creates a simple polygon representing an area in Bandongan, Indonesia.
+    function initMap() {
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 14,
+        center: { lat: -7.4664, lng: 110.1956 },
+        mapTypeId: "terrain",
+      });
+
+      const shapeBandongan = [
+        { lat: -7.4864, lng: 110.1606 },
+        { lat: -7.4864, lng: 110.2006 },
+        { lat: -7.4464, lng: 110.2006 },
+        { lat: -7.4464, lng: 110.1606 },
+      ];
+
+      const shapeTrasan = [
+        { lat: -7.4864, lng: 110.1806 },
+        { lat: -7.4864, lng: 110.2006 },
+        { lat: -7.4694, lng: 110.2006 },
+        { lat: -7.4694, lng: 110.1806 },
+      ];
+
+      const bandonganPolygon = new google.maps.Polygon({
+        paths: shapeBandongan,
+        strokeColor: "#FF0000",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#FF0000",
+        fillOpacity: 0.35,
+      });
+
+      const trasanPolygon = new google.maps.Polygon({
+        paths: shapeTrasan,
+        strokeColor: "#AAAA00",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#AAAA00",
+        fillOpacity: 0.35,
+      });
+
+      bandonganPolygon.addListener("click", function () {
+        bandonganPolygon.setOptions({
+          fillColor: "#0000FF", // Change the fill color to green when clicked
+          strokeColor: "#0000FF", // Change the fill color to green when clicked
+        });
+        trasanPolygon.setOptions({
+          fillColor: "#AAAA00", // Change the fill color to blue when clicked
+          strokeColor: "#AAAA00",
+        });
+        document.getElementById("locationName").innerText = "Bandongan";
+      });
+
+      trasanPolygon.addListener("click", function () {
+        trasanPolygon.setOptions({
+          fillColor: "#0000FF", // Change the fill color to green when clicked
+          strokeColor: "#0000FF", // Change the fill color to green when clicked
+        });
+        bandonganPolygon.setOptions({
+          fillColor: "#FF0000", // Change the fill color to green when clicked
+          strokeColor: "#FF0000", // Change the fill color to green when clicked
+        });
+        document.getElementById("locationName").innerText = "Trasan";
+      });
+
+      const bandonganBounds = new google.maps.LatLngBounds();
+      shapeBandongan.forEach((coord) => bandonganBounds.extend(coord));
+      const bandonganCenter = bandonganBounds.getCenter();
+
+      const trasanBounds = new google.maps.LatLngBounds();
+      shapeTrasan.forEach((coord) => trasanBounds.extend(coord));
+      const trasanCenter = trasanBounds.getCenter();
+
+      const bandonganLabel = new google.maps.Marker({
+        position: bandonganCenter,
+        map: map,
+        label: {
+          text: "Kecamatan Bandongan",
+          color: "#FFFFFF",
+        },
+      });
+
+      const trasanLabel = new google.maps.Marker({
+        position: trasanCenter,
+        map: map,
+        label: {
+          text: "Desa Trasan",
+          color: "#FFFFFF",
+        },
+      });
+
+      bandonganPolygon.setMap(map);
+      trasanPolygon.setMap(map);
+    }
+
+
+    window.initMap = initMap;
+
+    // Load the Google Maps API script and call initMap when loaded
+    function loadMapScript() {
+      const script = document.createElement("script");
+      script.src =
+        "https://maps.googleapis.com/maps/api/js?key=AIzaSyA-_vM9GsZ1aIl7X2d8o37Y4vuetGye030&callback=initMap&v=weekly";
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+
+    // Call the loadMapScript function when the page finishes loading
+    window.onload = loadMapScript;
+  </script>
+</body>
+
+</html>
