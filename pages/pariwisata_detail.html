@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--
+  @license
+  Copyright 2019 Google LLC. All Rights Reserved.
+  SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Umpak Sumbing</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+    /* Set the height and width of the map container */
+    #map {
+      height: calc(100% - 130px);
+      /* Set the desired height of the map, subtracting navbar height */
+      width: 100%;
+      /* Set the desired width of the map */
+      margin: 0 auto;
+      /* Center the map horizontally */
+    }
+
+    /* Optional: Makes the sample page fill the window. */
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+</head>
+
+<body class="bg-light">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-item-center" href="#">
+        <img src="/img/logo/logo.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-top" />
+        <h6 class="my-auto mx-2">Umpak Sumbing</h6>
+        <div class="title mx-2 mx-md-3">
+          <div class="bandongan-1">Umpak Sumbing</div>
+          <div class="address">Kawasan Pedesaan Umpak Sumbing, Kecamatan Bandongan</div>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <ul class="navbar-nav justify-content-end mx-3">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/index.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/pages/pariwisata_detail.html">Pariwisata</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Dropdown </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END NAVBAR -->
+
+
+  <main class="container" style="padding-top: 10%;">
+    <div class="row">
+      <div class="col-md-8">
+        <article>
+          <h1 class="mb-3">Bukit Kembar</h1>
+          <img src="\img\wisata desa\wisata ngepanrejo\bukitKembar.png" alt="Blog Post Image" class="img-fluid mb-3">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada id neque eget lacinia. In congue
+            eros
+            ac venenatis. Nunc non cursus turpis, id efficitur nisi. Donec id nisl sed lorem bibendum ultrices. Nullam
+            vel
+            nunc eu elit aliquam pulvinar. Mauris sem ex, aliquet sit amet rhoncus a, rutrum in ex.</p>
+
+          <p>Nulla sed eleifend neque. Cras semper auctor mi, vel tempus nunc finibus non. Nam eget ex consequat, varius
+            mi
+            nec, aliquet massa. Sed scelerisque lorem ut mi malesuada, nec malesuada est facilisis. Donec quis risus
+            arcu.
+            Nunc mollis massa urna, et dictum lacus feugiat ac. Vestibulum ante ipsum primis in faucibus orci luctus et
+            ultrices posuere cubilia curae; Vestibulum ac ultrices nisi. Cras a facilisis urna, vel vestibulum justo.
+            Sed
+            sit amet ultricies nisi, vitae suscipit erat. Nam blandit blandit mi id scelerisque. Mauris nec diam sit
+            amet
+            ligula accumsan fermentum. Quisque ac nisl velit. Praesent et dignissim ante, vel fringilla nunc.</p>
+        </article>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card my-2">
+          <div class="card-body">
+            <h5 class="card-title">Sidebar Widget</h5>
+            <p class="card-text">Some text for the widget goes here.</p>
+          </div>
+        </div>
+
+        <div class="card my-2">
+          <div class="card-body">
+            <h5 class="card-title">Sidebar Widget</h5>
+            <p class="card-text">Some text for the widget goes here.</p>
+          </div>
+        </div>
+
+        <div class="card my-2">
+          <div class="card-body">
+            <a href="/pages/pariwisata.html">
+              <button type="button" class="btn btn-primary top-left-corner">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z">
+                  </path>
+                </svg>
+                Back
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-light py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>About Us</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat, leo a lacinia viverra, augue ex
+            vestibulum augue, id condimentum nunc sapien et nulla.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Contact Us</h5>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-telephone-fill"></i> Phone: +1234567890</li>
+            <li><i class="bi bi-envelope-fill"></i> Email: example@example.com</li>
+            <li><i class="bi bi-geo-fill"></i> Address: 123 Street, City, Country</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Follow Us</h5>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="#"><i class="bi bi-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="bi bi-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="bi bi-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

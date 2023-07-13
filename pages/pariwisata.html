@@ -13,11 +13,12 @@
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
   <style>
     /* Set the height and width of the map container */
     #map {
-      height: calc(100% - 100px);
+      height: calc(100% - 130px);
       /* Set the desired height of the map, subtracting navbar height */
       width: 100%;
       /* Set the desired width of the map */
@@ -37,7 +38,7 @@
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 </head>
 
-<body>
+<body class="bg-light">
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -62,10 +63,10 @@
         </div>
         <ul class="navbar-nav justify-content-end mx-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+            <a class="nav-link" aria-current="page" href="/index.html">Beranda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./pages/pariwisata.html">Pariwisata</a>
+            <a class="nav-link active" href="/pages/pariwisata.html">Pariwisata</a>
           </li>
           <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Dropdown </a>
@@ -83,15 +84,155 @@
 
   <div id="map"></div>
   <div class="container text-center">
-    <h1 id="locationName">Bandongan</h1>
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <button class="btn btn-primary mr-2">Previous</button>
-        <button class="btn btn-primary">Next</button>
+    <h1 class="mt-4 locationName" style="color:#222;">Bandongan</h1>
+    <h3 class="mt-4 locationNames" style="color:#222;">Luas: 45,79 km²</h3>
+  </div>
+
+  <div class="container my-5">
+    <div class="row justify-content-left">
+
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="../img/foto desa/desa bandongan.png" class="card-img-top locationPic" alt="Job Logo">
+          <div class="card-body">
+            <h5 class="card-title">Kampung Seni</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aspernatur iusto
+              quis amet, qui earum enim dicta quia? Ab, eum! Eius saepe voluptas incidunt nesciunt asperiores quasi
+              totam commodi libero.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item locationName">Desa Bandongan</li>
+          </ul>
+          <div class="card-body">
+            <a href="/pages/pariwisata_detail.html" class="btn btn-primary">Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="../img/foto desa/desa bandongan.png" class="card-img-top locationPic" alt="Job Logo">
+          <div class="card-body">
+            <h5 class="card-title">Sleker Asri</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aspernatur iusto
+              quis amet, qui earum enim dicta quia? Ab, eum! Eius saepe voluptas incidunt nesciunt asperiores quasi
+              totam commodi libero.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item locationName">Desa Bandongan</li>
+          </ul>
+          <div class="card-body">
+            <a href="/pages/pariwisata_detail.html" class="btn btn-primary">Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="../img/foto desa/desa bandongan.png" class="card-img-top locationPic" alt="Job Logo">
+          <div class="card-body">
+            <h5 class="card-title">Bukit Kembar</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aspernatur iusto
+              quis amet, qui earum enim dicta quia? Ab, eum! Eius saepe voluptas incidunt nesciunt asperiores quasi
+              totam commodi libero.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item locationName">Desa Bandongan</li>
+          </ul>
+          <div class="card-body">
+            <a href="/pages/pariwisata_detail.html" class="btn btn-primary">Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="../img/foto desa/desa bandongan.png" class="card-img-top locationPic" alt="Job Logo">
+          <div class="card-body">
+            <h5 class="card-title">Makam</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aspernatur iusto
+              quis amet, qui earum enim dicta quia? Ab, eum! Eius saepe voluptas incidunt nesciunt asperiores quasi
+              totam commodi libero.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item locationName">Desa Bandongan</li>
+          </ul>
+          <div class="card-body">
+            <a href="/pages/pariwisata_detail.html" class="btn btn-primary">Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="../img/foto desa/desa bandongan.png" class="card-img-top locationPic" alt="Job Logo">
+          <div class="card-body">
+            <h5 class="card-title">Patung Sapi "Sapen"</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aspernatur iusto
+              quis amet, qui earum enim dicta quia? Ab, eum! Eius saepe voluptas incidunt nesciunt asperiores quasi
+              totam commodi libero.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item locationName">Desa Bandongan</li>
+          </ul>
+          <div class="card-body">
+            <a href="/pages/pariwisata_detail.html" class="btn btn-primary">Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="../img/foto desa/desa bandongan.png" class="card-img-top locationPic" alt="Job Logo">
+          <div class="card-body">
+            <h5 class="card-title">Kali Drajat</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aspernatur iusto
+              quis amet, qui earum enim dicta quia? Ab, eum! Eius saepe voluptas incidunt nesciunt asperiores quasi
+              totam commodi libero.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item locationName">Desa Bandongan</li>
+          </ul>
+          <div class="card-body">
+            <a href="/pages/pariwisata_detail.html" class="btn btn-primary">Details</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  </div>
+
+  <footer class="bg-dark text-light py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>About Us</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat, leo a lacinia viverra, augue ex
+            vestibulum augue, id condimentum nunc sapien et nulla.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Contact Us</h5>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-telephone-fill"></i> Phone: +1234567890</li>
+            <li><i class="bi bi-envelope-fill"></i> Email: example@example.com</li>
+            <li><i class="bi bi-geo-fill"></i> Address: 123 Street, City, Country</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Follow Us</h5>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="#"><i class="bi bi-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="bi bi-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="bi bi-instagram"></i></a></li>
+          </ul>
+        </div>
       </div>
     </div>
+  </footer>
 
-  </div>
+
 
   <script>
     /**
@@ -148,7 +289,22 @@
           fillColor: "#AAAA00", // Change the fill color to blue when clicked
           strokeColor: "#AAAA00",
         });
-        document.getElementById("locationName").innerText = "Bandongan";
+
+        var locationNames = document.getElementsByClassName("locationName");
+        for (var i = 0; i < locationNames.length; i++) {
+          locationNames[i].innerText = "Kecamatan Bandongan";
+        }
+
+        var locationNames2 = document.getElementsByClassName("locationNames");
+        for (var i = 0; i < locationNames2.length; i++) {
+          locationNames2[i].innerText = "Luas: 45,79 km²";
+        }
+
+        var locationPics = document.getElementsByClassName("locationPic");
+        for (var i = 0; i < locationNames.length; i++) {
+          locationPics[i].src = "../img/foto desa/desa bandongan.png";
+        }
+
       });
 
       trasanPolygon.addListener("click", function () {
@@ -160,7 +316,17 @@
           fillColor: "#FF0000", // Change the fill color to green when clicked
           strokeColor: "#FF0000", // Change the fill color to green when clicked
         });
-        document.getElementById("locationName").innerText = "Trasan";
+
+        var locationNames = document.getElementsByClassName("locationName");
+        for (var i = 0; i < locationNames.length; i++) {
+          locationNames[i].innerText = "Desa Trasan";
+        }
+
+        var locationNames2 = document.getElementsByClassName("locationNames");
+        for (var i = 0; i < locationNames2.length; i++) {
+          locationNames2[i].innerText = "Luas: 12,39 km²";
+        }
+      
       });
 
       const bandonganBounds = new google.maps.LatLngBounds();
@@ -176,7 +342,7 @@
         map: map,
         label: {
           text: "Kecamatan Bandongan",
-          color: "#FFFFFF",
+          color: "#fff",
         },
       });
 
@@ -185,7 +351,7 @@
         map: map,
         label: {
           text: "Desa Trasan",
-          color: "#FFFFFF",
+          color: "#fff",
         },
       });
 
